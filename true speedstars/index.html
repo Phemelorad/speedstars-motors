@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: darkgray;
+      margin: 1%;
+    }
+
+    header {
+      background-color: black;
+      padding: 1%;
+    }
+
+    aside {
+      background-color: aqua;
+      float: left;
+      margin: 1%;
+      width: 15%;
+      height: auto;
+    }
+
+    article {
+      background-color: beige;
+      margin: 1%;
+      float: right;
+      width: 81%;
+      height: fit-content;
+      position: relative; /* Ensure positioning context */
+    }
+
+    footer {
+      background-color: blue;
+      margin: 1%;
+      clear: both;
+    }
+    .sidenav {
+    height: 70%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.topnav {
+    overflow: hidden;
+    background-color: darkgrey;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: red;
+    color: white;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+}
+
+    .banner-image {
+    width: 100%;
+    height: auto;
+     }
+
+    .grid-container {
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 4%;
+        padding-top: 1%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 4 columns */
+      grid-gap: 2%;
+      width: 100%; /* Gap between grid items */
+      height: auto; /* Adjust height as needed */
+    }
+
+    .container {
+        border:thin solid #777;
+      position: relative;
+      width: 100%;
+       /* Each container takes up 100% width of its grid cell */
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #008CBA;
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    /* Styles for the responsive image gallery */
+    .gallery {
+      border: 1px solid #ccc;
+      overflow: hidden; /* Ensure images don't overflow */
+    }
+
+    .gallery:hover {
+      border: 1px solid #777;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    .desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  
+    <img class="banner-image" src="img (3).png" alt="Banner Image">
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="P&S.html"> Products & Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <input type="text" placeholder="Search..">
+      </div>
+    
+
+    
+  </header>
+
+  <aside>
+      <div class="sidenav">
+        <h4 style="color: white;">MARKETS</h4>
+        <a href="index (2).HTML">European </a>
+        <a href="jdm market.html">Japanese </a>
+     </div>
+    
+  </aside>
+
+  <article>
+
+    <h3>NISSAN</h3>
+    <div class="grid-container">
+      <div class="container">
+        <p>NISSAN GTR R29</p>
+        <img src="R29.jpg" alt="GTR R29"class="image">
+        <h5>MSRP:P67 000 <button class="btn">BUY</button></h5>
+        <div class="overlay">
+          <div class="text">
+            <p>Engine: V-10</p>
+            <p>Top speed: 285km/hr</p>
+            <p>Horsepower: 745hp</p>
+            <p>Drivetrain: RWD</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <p>NISSAN GTR R33</p>
+        <img src="R33.jpg" alt="GTR R33" class="image">
+        <h5>MSRP:$118 795 <button class="btn">BUY</button></h5>
+        <div class="overlay">
+          <div class="text">
+            <p>Engine: V-10</p>
+            <p>Top speed: 285km/hr</p>
+            <p>Horsepower: 745hp</p>
+            <p>Drivetrain: RWD</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p>NISSAN GTR R34</p>
+        <img src="download 1.jpg" alt="GTR R34" class="image">
+        <h5>MSRP:P101 000 <button class="btn">BUY</button></h5>
+        <div class="overlay">
+          <div class="text">
+            <p>Engine: V-10</p>
+            <p>Top speed: 285km/hr</p>
+            <p>Horsepower: 745hp</p>
+            <p>Drivetrain: RWD</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p>NISSAN GTR R35</p>
+        <img src="r35 gt.jpg" alt="gtr r35"class="image">
+        <div class="overlay">
+          <div class="text">
+            <p>Engine: V-10</p>
+            <p>Top speed: 285km/hr</p>
+            <p>Horsepower: 745hp</p>
+            <p>Drivetrain: RWD</p>
+            <P>MSRP:P205 000 <button class="btn">BUY</button></P>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <p>NISSAN S15</p>
+        <img src="nissan-silvia.jpg" alt="s15"  class="image">
+        <div class="overlay">
+          <div class="text">
+            <p>Engine: V-10</p>
+            <p>Top speed: 285km/hr</p>
+            <p>Horsepower: 745hp</p>
+            <p>Drivetrain: RWD</p>
+            <h5>MSRP:P69 000<button class="btn">BUY</button></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p>NISSAN 400Z</p>
+        <img src="download (5).jpg" alt="400z"class="image">
+        <div class="overlay">
+          <div class="text">
+            <p>Engine: V-10</p>
+            <p>Top speed: 285km/hr</p>
+            <p>Horsepower: 745hp</p>
+            <p>Drivetrain: RWD</p>
+            <h5>MSRP:98 000 <button class="btn">BUY</button></h5>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+      <p>NISSAN 180SX</p>
+      <img src="images (2).jpg" alt="180SX"  class="image">
+      <h5>MSRP:P30 000 <button class="btn">BUY</button></h5>
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <p>NISSAN 370Z</p>
+      <img src="download (9).jpg" alt="370Z"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P450 000 <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>NISSAN FAIRLADY Z</p>
+      <img src="D0WNLOAD-5.jpg" alt="FAIRLADY Z" class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P234 000  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <h3>TOYOTA</h3>
+
+  <div class="grid-container">
+    <div class="container">
+      <p>TOYOTA AE86</p>
+      <img src="images (4).jpg" alt="AE86"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P75 000  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <p>TOYOTA MK5 SUPRA</p>
+      <img src="MK5.jpg" alt="MK 5 SUPRA"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P305 000  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>TOYOTA MK4 SUPRA</p>
+      <img src="img supra.jpg" alt="MK4 SUPRA" class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P598 000  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>TOYOTA CHASER</p>
+      <img src="CHASER.jpg" alt="JZX100 CHASER"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P65 000  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>TOYOTA ALTEZZA</p>
+      <img src="red-ALT.jpg" alt="ALTEZZA" class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P50 000 <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>TOYOTA GR COROLLA</p>
+      <img src="download(13).jpg" alt="GR corolla"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P100 999  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+
+    <h3>HONDA</h3>
+  <div class="grid-container">
+    <div class="container">
+      <p>HONDA NSX</p>
+      <img src="NSX.jpg" alt="NSX" class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P354 000<button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>HONDA CIVIC TYPE R</p>
+      <img src="TYPE R.jpg" alt="civic type r"  class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P87 000<button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <p> 2021 HONDA NSX</p>
+      <img src="ACURA.jpg" alt="2021 NSX" class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P199 000 <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <p>HONDA INTEGRA R</p>
+      <img src="download (13).jpg" alt="integra r"  class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P65 000 <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <p>HONDA EK9</p>
+      <img src="download (15).jpg" alt="ek9"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P45 000 <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <h3>MAZDA</h3>
+  <div class="grid-container">
+    <div class="container">
+      <p>MAZDA RX8</p>
+      <img src="download (6).jpg" alt="RX8"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P143 000  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>MAZDA RX7</p>
+      <img src="IMAGES_1.jpg" alt="RX7" class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P98 700  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>MAZDA MIATA</p>
+      <img src="MX5.jpg" alt="MIATA"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P59 000<button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>MAZDA MX5</p>
+      <img src="download (8).jpg" alt="MX5" class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P97 000<button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>MAZDA SPEED 3 HATCHBACK</p>
+      <img src="download (16).jpg" alt="speed 3 hatchback"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P56 000 <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>MAZDA 6</p>
+      <img src="download (17).jpg" alt="mazda 6"class="image">
+      <div class="overlay">
+        <div class="text">
+          <p>Engine: V-10</p>
+          <p>Top speed: 285km/hr</p>
+          <p>Horsepower: 745hp</p>
+          <p>Drivetrain: RWD</p>
+          <h5>MSRP:P45 000  <button class="btn">BUY</button></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
+
+
+
+
+  </article>
+  <footer>
+    footer
+  </footer>
+</body>
+</html>
+
